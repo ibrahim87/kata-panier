@@ -1,0 +1,23 @@
+<!-- <form>
+  <mat-form-field class="w-3/5">
+    <mat-label>Selectionner un article</mat-label>
+    <mat-select  (selectionChange)="searchArticle($event)">
+      <mat-option *ngFor="let article of articles" [value]="article">
+        {{article.productName}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</form> -->
+
+<select [(ngModel)]="field">
+  <option *ngFor="let name of articles" [value]="name">
+    {{name.category}}
+  </option>
+</select>
+
+<input  type="text" [(ngModel)]="value"/>
+
+<div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 grid-cols-3 p-8 gap-8">
+<app-article [data]="articles" [field]="field" [value]="value"></app-article>
+</div>
+

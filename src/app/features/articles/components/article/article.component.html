@@ -1,0 +1,32 @@
+<div *ngFor="let article of getData(); let i=index">
+    {{i}}  - {{article.productName }}   {{article | json }}  
+  
+  </div>
+
+<!-- <mat-card class="rounded-xl shadow-xl">
+    <img mat-card-image class="flex justify-center" style="width: 10rem; height:10rem;" [src]="data.mainImageUrl" alt="Photo of a Shiba Inu">
+    <mat-card-header>
+      <mat-card-title>{{data.productName}}</mat-card-title>
+    </mat-card-header> 
+   
+    <mat-card-content>
+        <div class="flex flex-col">
+            <div class="flex flex-row">
+                <div class="text-xs uppercase bg-yellow-100 p-1 px-2 text-yellow-700 rounded-2xl">{{data.category}}</div>
+            </div>
+            <div class="flex flex-row items-center justify-start">
+                <p class="font-bold text-sm mr-2">Prix {{data.price | currency: 'EUR':'symbol'}}</p>
+            </div>
+        </div>
+    </mat-card-content>
+        <mat-card-actions class="flex flex-col justify-between">
+            <button mat-fab extended color="primary" class="flex-initial w-64">
+                Qet : {{data.quantity}}
+              </button>
+         
+            <button mat-fab extended color="primary" (click)="handelAddToCart(data)" class="flex-initial w-64">
+                <mat-icon>add</mat-icon>
+                Ajouter
+              </button>
+    </mat-card-actions>
+  </mat-card> -->
